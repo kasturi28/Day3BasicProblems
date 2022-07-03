@@ -19,8 +19,8 @@ public class ArrayProgram {
 			System.out.println(arr[i] + " ");
 
 		}
-		
-		//Array fr will store frequencies of element  
+
+		// Array fr will store frequencies of element
 
 		int[] fr = new int[arr.length];
 		int visited = -1;
@@ -38,7 +38,7 @@ public class ArrayProgram {
 		}
 
 		// Displays the frequency of each element present in array
-	    System.out.println("---------------------------------------");
+		System.out.println("---------------------------------------");
 		System.out.println(" Element | Frequency");
 		System.out.println("---------------------------------------");
 		for (int i = 0; i < fr.length; i++) {
@@ -46,5 +46,25 @@ public class ArrayProgram {
 				System.out.println("    " + arr[i] + "    |    " + fr[i]);
 		}
 		System.out.println("----------------------------------------");
+
+		// Initialize max with first element of array.
+		int max = arr[0];
+		// Loop through the array
+		for (int i = 0; i < arr.length; i++) {
+			// Compare elements of array with max
+			if (arr[i] > max)
+				max = arr[i];
+		}
+		System.out.println("Largest element present in given array: " + max);
+
+		// Initialize min with first element of array.
+		int min = arr[0];
+		// Loop through the array
+		for (int i = 0; i < arr.length; i++) {
+			// Compare elements of array with min
+			if (arr[i] < min)
+				min = arr[i];
+		}
+		System.out.println("Smallest element present in given array: " + min);
 	}
 }
